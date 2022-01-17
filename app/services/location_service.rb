@@ -8,8 +8,8 @@ class LocationService
     private
 
     def conn
-      Faraday.new("http://www.mapquestapi.com") do |x|
-        x.params['key'] = ENV['maps_api_key']
+      Faraday.new("http://www.mapquestapi.com") do |f|
+        f.params['key'] = ENV['maps_api_key']
       end
     end
 
