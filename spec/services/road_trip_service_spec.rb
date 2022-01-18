@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Road Trip Service spec' do
-  describe 'Mapquest directions api call' do
+  describe 'Mapquest directions api call', :vcr do
     it 'returns all information about the directions' do
       from = 'Denver, CO'
       to = 'Estes Park, CO'
