@@ -32,15 +32,6 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-VCR.configure do |config|
-  config.allow_http_connections_when_no_cassette = true
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
-  config.hook_into :webmock
-  config.filter_sensitive_data("Hide My Key") { ENV["maps_api_key"] }
-  config.filter_sensitive_data("Hide My Key") { ENV["appid"] }
-  config.configure_rspec_metadata!
-end
-
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -74,3 +65,11 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
+VCR.configure do |config|
+  config.allow_http_connections_when_no_cassette = true
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.filter_sensitive_data("Hide My Key") { ENV["maps_api_key"] }
+  config.filter_sensitive_data("Hide My Key") { ENV["appid"] }
+  config.configure_rspec_metadata!
+end
