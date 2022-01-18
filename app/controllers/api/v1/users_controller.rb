@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
       render json: {error: 'Email has already been taken', status: 400}, status: 400
     else
       if params[:password] == params[:password_confirmation]
-        user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], api_key: User.create_api_key)
+        user = User.new(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation], api_key: User.create_api_key)
         if user.save
           render json: UsersSerializer.new(user), status: 201
         else
