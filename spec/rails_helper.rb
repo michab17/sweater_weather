@@ -69,7 +69,8 @@ VCR.configure do |config|
   config.allow_http_connections_when_no_cassette = true
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
-  config.filter_sensitive_data("Hide My Key") { ENV["maps_api_key"] }
-  config.filter_sensitive_data("Hide My Key") { ENV["appid"] }
+  # config.filter_sensitive_data("Hide My Key") { ENV["maps_api_key"] }
+  # config.filter_sensitive_data("Hide My Key") { ENV["appid"] }
   config.configure_rspec_metadata!
+
 end
