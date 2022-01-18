@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Image service spec' do
-  describe 'calls the unsplash api' do
+  describe 'calls the unsplash api', :vcr do
     it 'returns image information based on a search query' do
       query = 'denver,co'
 
