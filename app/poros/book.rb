@@ -15,11 +15,15 @@ class Book
     @books = books_data(data[:docs])
   end
 
+  def get_forecast(data)
+    ForecastFacade.get_weather(LocationFacade.get_location(data).latitude, LocationFacade.get_location(data).longitude)
+  end
+
   def forecast_data(data)
     { 
       forecast: { 
-        summary: ForecastFacade.get_weather(LocationFacade.get_location(data).latitude, LocationFacade.get_location(data).longitude).current_weather[:conditions],
-        temperature: ForecastFacade.get_weather(LocationFacade.get_location(data).latitude, LocationFacade.get_location(data).longitude).current_weather[:temperature],
+        summary: get_forecast(data).current_weather[:conditions],
+        temperature: get_forecast(data).current_weather[:temperature],
        }
      }
   end
