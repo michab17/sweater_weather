@@ -29,5 +29,16 @@ RSpec.describe 'Book request spec' do
       expect(books[:data][:attributes][:books][0][:title]).to be_a String
       expect(books[:data][:attributes][:books][0][:publisher]).to be_an Array
     end
+
+    it 'renders an error if the quantity is less than zero' do
+      get '/api/v1/book-search?location=denver,co&quantity=-5'
+
+      error = JSON.parse(response.body, symbolize_names: :true)
+
+      expect(response.status).to eq 422
+      expect(error).to be_a Hash
+      expect(error[:error]).to eq 'Please enter a quantity greater than zero'
+      expect(error[:status]).to eq 422
+    end
   end
 end
