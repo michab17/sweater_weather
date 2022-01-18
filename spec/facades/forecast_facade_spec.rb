@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Forecast facade spec' do
-  describe 'creates weather poros' do
+  describe 'creates weather poros', :vcr do
     it 'returns an instance of weather' do
       weather = ForecastFacade.get_weather('39.7385', '-104.9849')
       

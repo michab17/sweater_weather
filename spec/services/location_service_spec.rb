@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Location service spec' do
-  describe 'Mapquest api call' do
+  describe 'Mapquest api call', :vcr do
     it 'returns a locations information' do
       location = 'Denver,CO'
 

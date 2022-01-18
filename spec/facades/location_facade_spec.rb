@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Location facade spec' do
-  describe 'creates Location poros' do
+  describe 'creates Location poros', :vcr do
     it 'returns a Location, consisting of latitude and longitude' do
       location = LocationFacade.get_location('Denver,CO')
 

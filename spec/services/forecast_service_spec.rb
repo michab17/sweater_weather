@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Forecast service spec' do
-  describe 'OpenWeather api call' do
+  describe 'OpenWeather api call', :vcr do
     it 'returns weather information' do
       lat = '39.738453'
       lon = '-104.984853'
