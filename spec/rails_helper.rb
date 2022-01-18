@@ -72,5 +72,11 @@ VCR.configure do |config|
   # config.filter_sensitive_data("Hide My Key") { ENV["maps_api_key"] }
   # config.filter_sensitive_data("Hide My Key") { ENV["appid"] }
   config.configure_rspec_metadata!
+end
 
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
