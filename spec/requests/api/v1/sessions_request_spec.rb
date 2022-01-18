@@ -2,9 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'Sessions Request spec' do
   describe 'POST /api/v1/sessions' do
+    before :each do
+      user = User.create(email: 'test@test.com', password: 'password', password_confirmation: 'password', api_key: User.create_api_key)
+    end
     it 'creates a session and returns user information' do
       process :post, '/api/v1/sessions', params: {
-        email: "whatever@example.com",
+        email: "test@test.com",
         password: "password"
       }
 
