@@ -8,9 +8,9 @@ RSpec.describe 'Forecast show spec' do
       forecast = JSON.parse(response.body, symbolize_names: :true)
 
       expect(response).to be_successful
-      expect(forecast[:data][:attributes][:current_weather].keys).to include(:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon)
-      expect(forecast[:data][:attributes][:daily_weather][0].keys).to include(:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon)
-      expect(forecast[:data][:attributes][:hourly_weather][0].keys).to include(:time, :temperature, :conditions, :icon)
+      expect(forecast[:data][:attributes][:current_weather].keys).to eq [:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon]
+      expect(forecast[:data][:attributes][:daily_weather][0].keys).to eq [:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon]
+      expect(forecast[:data][:attributes][:hourly_weather][0].keys).to eq [:time, :temperature, :conditions, :icon]
     end
   end
 end
