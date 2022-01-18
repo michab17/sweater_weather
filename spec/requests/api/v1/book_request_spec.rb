@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Book request spec' do
-  describe 'GET /api/v1/book_search?location=denver,co&quantity=5', :vcr do
+  describe 'GET /api/v1/book-search?location=denver,co&quantity=5', :vcr do
     it 'returns structured JSON response' do
-      get '/api/v1/book_search?location=denver,co&quantity=5'
+      get '/api/v1/book-search?location=denver,co&quantity=5'
 
       books = JSON.parse(response.body, symbolize_names: :true)
 
