@@ -14,6 +14,6 @@ RSpec.describe 'Books facade spec' do
     expect(books.books.count).to eq 5
     expect(books.books[0].keys).to eq [:isbn, :title, :publisher]
     expect(books.forecast).to be_a Hash
-    expect(books.forecast[:forecast].keys).to eq [:summary, :temperature]
+    expect(books.forecast.keys).to eq [:summary, :temperature]
   end
 end
