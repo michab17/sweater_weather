@@ -20,8 +20,8 @@ RSpec.describe 'Book request spec' do
       expect(books[:data][:attributes][:destination]).to be_a String
       expect(books[:data][:attributes][:destination]).to eq 'denver,co'
       expect(books[:data][:attributes][:forecast]).to be_a Hash
-      expect(books[:data][:attributes][:forecast][:forecast].keys).to eq [:summary, :temperature]
-      expect(books[:data][:attributes][:forecast][:forecast][:summary]).to be_a String
+      expect(books[:data][:attributes][:forecast].keys).to eq [:summary, :temperature]
+      expect(books[:data][:attributes][:forecast][:summary]).to be_a String
       expect(books[:data][:attributes][:total_books_found]).to be_an Integer
       expect(books[:data][:attributes][:books]).to be_an Array
       expect(books[:data][:attributes][:books][0].keys).to eq [:isbn, :title, :publisher]
