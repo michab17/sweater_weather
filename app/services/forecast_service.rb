@@ -1,7 +1,7 @@
 class ForecastService
   class << self
     def get_weather(lat, lon)
-      response = conn.post("/data/2.5/onecall?lat=#{lat}&lon=#{lon}&appid=#{ENV['appid']}&units=imperial&exclude=minutely")
+      response = conn.get("/data/2.5/onecall?lat=#{lat}&lon=#{lon}&appid=#{ENV['appid']}&units=imperial&exclude=minutely")
       parse_data(response)
     end
 
