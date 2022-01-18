@@ -20,11 +20,9 @@ class Book
   end
 
   def forecast_data(data)
-    { 
-      forecast: { 
-        summary: get_forecast(data).current_weather[:conditions],
-        temperature: get_forecast(data).current_weather[:temperature],
-       }
+    {  
+      summary: get_forecast(data).current_weather[:conditions],
+      temperature: get_forecast(data).current_weather[:temperature],
      }
   end
 
