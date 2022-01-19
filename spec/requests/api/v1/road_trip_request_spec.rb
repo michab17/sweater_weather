@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Road Trip Request specs' do
-  describe 'POST /api/v1/road_trip' do
+  describe 'POST /api/v1/road_trip', :vcr do
     before :each do
       @user = User.create(email: 'test@test.com', password: 'password', password_confirmation: 'password', api_key: User.create_api_key)
     end
