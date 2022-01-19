@@ -9,8 +9,27 @@ RSpec.describe 'Forecast facade spec' do
       expect(weather.id).to eq 'null'
       expect(weather.type).to eq 'forecast'
       expect(weather.current_weather).to be_a Hash
+      expect(weather.current_weather.keys).to eq [:datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, :uvi, :visibility, :conditions, :icon]
+      expect(weather.current_weather[:temperature]).to be_a Float
+      expect(weather.current_weather[:feels_like]).to be_a Float
+      expect(weather.current_weather[:humidity]).to be_an Integer
+      expect(weather.current_weather[:uvi]).to be_an Integer
+      expect(weather.current_weather[:visibility]).to be_an Integer
+      expect(weather.current_weather[:conditions]).to be_a String
+      expect(weather.current_weather[:icon]).to be_a String
       expect(weather.daily_weather).to be_an Array
+      expect(weather.daily_weather[0].keys).to eq [:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon]
+      expect(weather.daily_weather[0][:date]).to be_a Date
+      expect(weather.daily_weather[0][:max_temp]).to be_a Float
+      expect(weather.daily_weather[0][:min_temp]).to be_a Float
+      expect(weather.daily_weather[0][:conditions]).to be_a String
+      expect(weather.daily_weather[0][:icon]).to be_a String
       expect(weather.hourly_weather).to be_an Array
+      expect(weather.hourly_weather[0].keys).to eq [:time, :temperature, :conditions, :icon]
+      expect(weather.hourly_weather[0][:time]).to be_a Time
+      expect(weather.hourly_weather[0][:temperature]).to be_a Float
+      expect(weather.hourly_weather[0][:conditions]).to be_a String
+      expect(weather.hourly_weather[0][:icon]).to be_a String
     end
 
     it 'does not return the fields that are not needed' do

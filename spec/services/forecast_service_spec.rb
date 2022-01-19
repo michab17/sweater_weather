@@ -9,6 +9,7 @@ RSpec.describe 'Forecast service spec' do
       weather = ForecastService.get_weather(lat, lon)
 
       expect(weather).to be_a Hash
+      expect(weather[:current]).to_not eq(nil)
       expect(weather[:hourly]).to_not eq(nil)
       expect(weather[:daily]).to_not eq(nil)
       expect(weather[:minutely]).to eq(nil)
