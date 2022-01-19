@@ -16,10 +16,10 @@ class RoadTrip
   end
 
   def get_travel_time(data)
-    if data[:route][:routeError]
-      'impossible route'
-    else
+    if data[:route][:formattedTime]
       data[:route][:formattedTime]
+    else
+      'impossible route'
     end
   end
 
@@ -47,7 +47,7 @@ class RoadTrip
       hours = get_hours
       days = get_days
       if hours > 8
-        information = weather.daily_weather.select { |forecast| forecast[:date] == Date.now + days }
+        information = weather.daily_weather.select { |forecast| forecast[:date] == Date.today + days }
         result = { temperature: information[0][:max_temp], conditions: information[0][:conditions] }
       elsif hours <= 8
         information = weather.hourly_weather.select { |forecast| forecast[:time] == Time.now.beginning_of_hour + (hours * 3600) }
