@@ -49,7 +49,6 @@ This repository is a fully functional/callable API that aggregates various outsi
       mapquest_api_key: your_key_here
       OpenWeather_api_key: your_key_here
       Unsplash_api_key: your_key_here
-
     ```
   - To setup database:
     - `rails db:create`
