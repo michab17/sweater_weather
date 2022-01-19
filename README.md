@@ -61,6 +61,7 @@ This repository is a fully functional/callable API that aggregates various outsi
 
 # External APIs
 This API consumes the following APIs:
-- [Twilio](https://www.twilio.com/docs/sms/api) to send text messages
-- [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to provide map image
+  - [Mapquest](https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register) for geolocation and directions
+  - [OpenWeather](https://openweathermap.org/api/one-call-api) for weather reports
+  - [Unsplash](https://unsplash.com/documentation) for background images
 
