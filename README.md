@@ -5,6 +5,13 @@
 This repository is a fully functional/callable API that aggregates various outside APIs and combines them into useful endpoints ready to be called. These Endpoint are set up to be used in a weather app with current, hourly, and daily weather data. Another useful endpoint that will make the weather app stand out from the rest is the ability to pick an origin and a destination and automatically get the weather of the destination when you are scheduled to arrive.
 
 # Learning Goals
+- Expose an API that aggregates data from multiple external APIs
+- Expose an API that requires an authentication token
+- Expose an API for CRUD functionality
+- Determine completion criteria based on the needs of other developers
+- Research, select, and consume an API based on your needs as a developer
+
+# Personal Learning Goals
 - Combine multiple outside APIs into my own API
 - Make an API that would be useful to others
 - Get a better understanding of API consumptions and exposures
