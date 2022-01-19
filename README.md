@@ -17,7 +17,7 @@ This repository is a fully functional/callable API that aggregates various outsi
 - [Local Setup](#local-setup)
 - [Contributors](#contributors)
 
-#### Sweater Weather Endpoints
+# Sweater Weather Endpoints
   - `GET /api/v1/forecast?location=location`
     - This endpoint lets you get the current, hourly, and daily weather at the given location
   - `GET /api/v1/backgrounds?location=location`
@@ -26,7 +26,7 @@ This repository is a fully functional/callable API that aggregates various outsi
     - This endpoint allows you to enter an origin and destination and gives you the travel time and weather information based on the time you would get to the destination
     - This API need a JSON payload with an origin, destination and api key
 
-#### Stack
+# Stack
 - Ruby on Rails, RSpec, PostgreSQL
 - Some of the gems: jsonapi-serializer, pry, simplecov, vcr, webmock, figaro, bcrypt
 
