@@ -1,6 +1,6 @@
 ![rails-badge](https://img.shields.io/badge/Rails-5.2.6-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.7.2-informational?style=flat-square)
 
-#### Sweater Weather
+# Sweater Weather
 
 This repository is a fully functional/callable API that aggregates various outside APIs and combines them into useful endpoints ready to be called. These Endpoint are set up to be used in a weather app with current, hourly, and daily weather data. Another useful endpoint that will make the weather app stand out from the rest is the ability to pick an origin and a destination and automatically get the weather of the destination when you are scheduled to arrive.
 
