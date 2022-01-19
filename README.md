@@ -15,7 +15,7 @@ This repository is a fully functional/callable API that aggregates various outsi
 - [Sweater Weather Endpoints](#sweater-weather-endpoints)
 - [Stack](#stack)
 - [Local Setup](#local-setup)
-- [Contributors](#contributors)
+- [External APIs](#external-apis)
 
 # Sweater Weather Endpoints
   - `GET /api/v1/forecast?location=location`
