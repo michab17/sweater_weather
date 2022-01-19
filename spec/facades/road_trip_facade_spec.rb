@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Road Trip Facade spec' do
   describe 'creates Road Trip poros' do
-    it 'returns and instance of a Road Trip with information if it is possible', :vcr do
+    it 'returns and instance of a Road Trip with information if it is possible' do
       from = 'Denver, CO'
       to = 'Estes Park, CO'
 
